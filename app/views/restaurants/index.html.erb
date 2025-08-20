@@ -1,0 +1,15 @@
+<h1> All Restaurants </h1>
+<p><button type="button" class="btn btn-secondary">Create new Restaurant</button></p>
+
+<div class="container-lg">
+<ul>
+  <% @restaurant.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li><%= restaurant.address %></li>
+    <li><%= restaurant.phone_number %></li>
+    <li><%= restaurant.category %></li>
+    <li><%= restaurant.created_at %></li>
+    <li><%= restaurant.updated_at %></li>
+  <% end %>
+</ul>
+</div>
